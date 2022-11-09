@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Radio Buttons Unchecked</title>
+	
+</head>
+<body>
+<div id="app">
+    <label><input type="radio" name="radio" value="1" checked>Radio Button 1</label>
+
+    <label><input type="radio" name="radio" value="2">Radio Button 2</label>
+
+    <label><input type="radio" name="radio" value="3">Radio Button 3</label>
+
+    <label><input type="radio" name="radio" value="4">Radio Button 4</label>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+    
+    var inputs = $('input');
+    var checked = inputs.filter(':checked').val();
+    
+    inputs.on('click', function(){
+        
+        if($(this).val() === checked) {
+            $(this).prop('checked', false);
+            checked = '';
+            
+        } else {
+            $(this).prop('checked', true);
+            checked = $(this).val();
+            
+        }
+    });
+    
+});
+</script>
+</html>
