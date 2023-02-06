@@ -16,4 +16,5 @@ cat > ex-1.html <<'EOF'
   <body>
     <h1>My Placeholder album</h1>
   </body>
+  </html>
 EOF
