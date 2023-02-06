@@ -1,5 +1,6 @@
 whoami
 ls -la
+pwd
 echo "\n"
 cat try.html
 echo "\n"
